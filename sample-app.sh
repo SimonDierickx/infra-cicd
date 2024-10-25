@@ -11,6 +11,7 @@ cp -r templates/* tempdir/templates/.
 cp -r static/* tempdir/static/.
 
 echo "body {background: blue;}" > static/styles.css
+echo kaas
 
 cat > tempdir/Dockerfile << _EOF_
 FROM python
