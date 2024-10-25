@@ -10,7 +10,7 @@ cp sample_app.py tempdir/.
 cp -r templates/* tempdir/templates/.
 cp -r static/* tempdir/static/.
 
-echo kaas
+echo "body {background: blue;}" > static/styles.css
 
 cat > tempdir/Dockerfile << _EOF_
 FROM python
@@ -26,4 +26,6 @@ cd tempdir || exit
 docker build -t sampleapp .
 docker run -t -d -p 5050:5050 --name samplerunning sampleapp
 docker ps -a 
+
+
 
