@@ -6,13 +6,11 @@ mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
 
+echo "body {background: blue;}" > static/style.css
+
 cp sample_app.py tempdir/.
 cp -r templates/* tempdir/templates/.
 cp -r static/* tempdir/static/.
-
-rm -rf static/styles.css
-echo "body {background: blue;}" > static/style.css
-echo kaas
 
 cat > tempdir/Dockerfile << _EOF_
 FROM python
